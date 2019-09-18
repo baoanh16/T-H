@@ -1,0 +1,9 @@
+@function r($size)
+	@return ($size/16px)*1rem
+
+=line($line)
+	overflow: hidden
+	display: -webkit-box
+	text-overflow: ellipsis
+	-webkit-line-clamp: $line
+	-webkit-box-orient: vertical

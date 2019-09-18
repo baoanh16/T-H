@@ -1,0 +1,58 @@
+footer
+	*
+		color: #fff
+	.footer-top
+		padding: 40px 0 30px
+	.footer-bottom
+		background: #8c0e12
+		padding: 10px 0
+	.footer-info
+		h3
+			font-size: 1rem
+			font-weight: 600
+			text-transform: uppercase
+		ul
+			list-style: none
+			padding-left: 0
+			margin-bottom: 0
+			li
+				display: flex
+				font-size: r(14px)
+				line-height: r(24px)
+				color: rgba(#fff,0.8)
+				*
+					color: rgba(#fff,0.8)
+				span
+					margin-right: 8px
+				+ li
+					margin-top: r(2px)
+				a
+					&:hover
+						color: rgba(#fff,0.8)
+	.copyright
+		p
+			margin-bottom: 0
+			font-size: r(13px)
+			color: rgba(#fff,0.8)
+	.social-links
+		ul
+			padding-left: 0
+			list-style: none
+			margin-bottom: 0
+			li
+				display: inline-block
+				+ li
+					margin-left: 30px
+	@media (max-width: 1025px)
+		.footer-info
+			h3
+				margin-bottom: 0.5rem
+			ul
+				margin-top: 0
+	@media (max-width: 768px)
+		.uk-flex
+			flex-direction: column
+			align-items: center
+		.copyright
+			margin-bottom: 8px
+			text-align: center

@@ -1,0 +1,87 @@
+header
+	padding-top: 15px
+	position: fixed
+	width: 100%
+	top: 0
+	left: 0
+	z-index: 1024
+	color: #fff
+	.uk-navbar-nav
+		>li
+			>a
+				padding: 0
+				font-size: 1rem
+				font-weight: 500
+				color: #fff
+			&.active
+				> a
+					font-weight: 500
+					color: $main-color
+	.logo
+		text-align: center
+	.search-toggle
+		margin-left: r(15px)
+		font-size: 20px
+		padding: 0
+		color: #fff
+	.uk-search
+		input
+			height: 40px
+			background: transparent
+			padding: 0 5px
+			color: #fff
+	.language
+		margin-left: r(10px)
+		.uk-dropdown
+			width: 80px !important
+			min-width: 0
+			padding: 6px 12px
+	@media (min-width: 1025px)
+		.uk-width-2-5\@l
+			position: relative
+			&:before
+				position: absolute
+				content: ''
+				height: 1px
+				width: 100%
+				left: 0
+				bottom: 15px
+				background: #fff
+	@media (max-width: 1025px)
+		padding-top: 8px
+		.logo
+			text-align: left
+			img
+				max-width: 4.5rem
+		.tool
+			justify-content: flex-end
+		.menu-toggle
+			font-size: 24px
+			margin-left: 15px
+		.uk-offcanvas-bar
+			padding: 20px
+		.uk-navbar-nav
+			flex-direction: column
+			> li
+				> a
+					min-height: 1px
+					justify-content: flex-start
+					padding: 12px 0
+					border-bottom: 1px dashed #fff
+		.uk-search
+			margin-top: 10px
+			height: auto
+			position: relative
+			input
+				border-bottom: 1px solid #fff
+				padding-right: 30px
+				padding-left: 0
+			button
+				position: absolute
+				top: 50%
+				transform: translateY(-50%)
+				background: transparent
+				right: 0
+				color: #fff
+				font-size: 20px
+				border: 0

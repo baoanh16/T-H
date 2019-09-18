@@ -1,0 +1,62 @@
+.home-4
+	background: #a91116
+	.uk-slider-items
+		.uk-margin-small-top
+			margin-top: 20px !important
+		.img
+			display: block
+			padding-top: 100%
+			position: relative
+			background: #fff
+			border-radius: 50%
+			overflow: hidden
+			img
+				position: absolute
+				top: 50%
+				left: 50%
+				object-fit: contain
+				transform: translate(-50%,-50%)
+			.title
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				display: flex
+				align-items: center
+				justify-content: center
+				z-index: 3
+				background: rgba(#000,0.7)
+				transition: 0.3s all
+				opacity: 0
+				span
+					color: #fff
+					font-weight: 500
+			&:hover
+				.title
+					opacity: 1
+	.uk-slidenav
+		text-decoration: none
+		span
+			color: #fff
+			font-size: r(30px)
+	@media (max-width: 1440px)
+		.uk-slidenav
+			padding: 0
+		.uk-position-center-left-out
+			left: -15px
+			right: auto
+		.uk-position-center-right-out
+			right: -15px
+			left: auto
+	@media (max-width: 1025px)
+		.uk-slider-items
+			.img
+				.title
+					opacity: 1
+					background: rgba(#000,0.5)
+	@media (max-width: 576px)
+		.uk-slider-items
+			.img
+				img
+					transform: translate(-50%,-50%) scale(0.8)

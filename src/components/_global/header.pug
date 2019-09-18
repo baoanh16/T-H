@@ -1,0 +1,56 @@
+header
+	.uk-container
+		.uk-flex
+			.hidden-mobile(class="uk-width-2-5@l")
+				.menu-left-wrapper
+					ul.uk-navbar-nav.uk-flex-between.menu-left
+						li.active
+							a(href="#")
+								span.mdi.mdi-home
+						li
+							a(href="#") Giới thiệu
+						li
+							a(href="#") Dịch vụ
+						li
+							a(href="#") Sản phẩm
+						li
+							a(href="#") Dự án 
+			div(class="uk-width-1-6@l")
+				.logo
+					img(src="./img/logo.png", alt="")
+			div(class="uk-width-2-5@l")
+				.uk-flex.uk-height-100.uk-flex-middle
+					.uk-width-5-6.hidden-mobile
+						.menu-right-wrapper
+							ul.uk-navbar-nav.uk-flex-between.nav-overlay.menu-right 
+								li
+									a(href="#") Tin tức - Sự kiện
+								li
+									a(href="#") Tuyển dụng
+								li
+									a(href="#") Liên hệ
+						.nav-overlay(hidden='')
+							.search-wrapper.uk-navbar-item.uk-height-100
+								.uk-search.uk-width-1-1.uk-height-100
+									input.uk-search-input
+									button.hidden-desktop
+										span.mdi.mdi-magnify
+					div(class="uk-width-1-6@l")
+						.tool.uk-flex.uk-height-100.uk-flex-middle
+							a.search-toggle.uk-navbar-toggle.hidden-mobile(href="#" uk-toggle="target: .nav-overlay; animation: uk-animation-slide-bottom-small" )
+								span.mdi.mdi-magnify
+							.language
+								span.current.uk-flex.uk-flex-middle 
+									| VN
+									span.mdi.mdi-chevron-down
+								.uk-dropdown(uk-dropdown='pos: bottom-justify')
+									ul.uk-nav.uk-dropdown-nav
+										li
+											a(href="#") EN
+										li
+											a(href="#") EN
+							.menu-toggle.hidden-desktop
+								span(uk-toggle="target: #offcanvas-mobile").mdi.mdi-menu
+	#offcanvas-mobile(uk-offcanvas="overlay: true")
+		.uk-offcanvas-bar
+			.uk-offcanvas-close(uk-close='')
