@@ -1,0 +1,30 @@
+.banner-wrapper
+    img
+        width: 100%
+    .breadcrumb-section
+        background: #363636
+        display: none
+        ol.breadcrumb
+            display: flex
+            padding: 10px 0
+            align-items: center
+            list-style: none
+            padding-left: 0
+            // border-bottom: 1px solid #dedede
+            // margin-bottom: 10px
+            li
+                display: flex
+                align-items: center
+                a
+                    color: #fff
+                    font-size: 13px
+                    &.active
+                        color: #fff
+                + li
+                    &:before
+                        content: '/'
+                        font-size: 12px
+                        padding: 0 10px
+                        color: #fff
+        @media(min-width: 768px)
+            display: block

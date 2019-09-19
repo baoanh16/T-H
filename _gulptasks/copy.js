@@ -2,27 +2,33 @@ import { src, dest } from "gulp";
 import { readFileSync } from "graceful-fs";
 
 export const copyImage = () => {
-	return src("./src/img/**/**.{svg,png,jpg,speg,gif}")
-		.pipe(dest("dist/img"))
+    return src("./src/img/**/**.{svg,png,jpg,speg,gif}")
+        .pipe(dest("dist/img"))
 }
 
 export const copyFonts = () => {
-	let glob = JSON.parse(readFileSync("config.json"));
-	return src(glob.font, {
-		allowEmpty: true
-	})
-		.pipe(dest("dist/fonts"));
+    let glob = JSON.parse(readFileSync("config.json"));
+    return src(glob.font, {
+            allowEmpty: true
+        })
+        .pipe(dest("dist/fonts"));
+}
+export const copyData = () => {
+
+    return src("./src/data/*.json")
+        .pipe(dest("dist/data"));
 }
 
 export const copyFavicon = () => {
-	return src("src/favicon.ico", {
-		allowEmpty: true
-	})
-		.pipe(dest("dist"));
+    return src("src/favicon.ico", {
+            allowEmpty: true
+        })
+        .pipe(dest("dist"));
 }
 
 module.exports = {
-	copyFonts,
-	copyImage,
-	copyFavicon
+    copyFonts,
+    copyImage,
+    copyFavicon,
+    copyData
 };

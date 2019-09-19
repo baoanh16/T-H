@@ -1,20 +1,25 @@
 {
-	"font": [
-		"bower_components/mdi/fonts/**",
-		"bower_components/font-awesome/webfonts/**",
-		"bower_components/linearicons/dist/web-font/fonts/**",
-		"src/fonts/**"
-	],
-	"js": [
-		"bower_components/jquery/dist/jquery.min.js",
-		"src/_plugins/uikit/dist/js/uikit.js",
-		"src/_plugins/uikit/dist/js/uikit-icon.js",
-		"src/_plugins/mapping.js",
-		"src/_plugins/mapping-listener.js",
-		"src/_plugins/diamond.js/diamonds.js"
-	],
-	"css": [
-		"src/_plugins/font.css",
-		"src/_plugins/diamond.js/diamonds.css"
-	]
+    "font": [
+        "bower_components/mdi/fonts/**",
+        "bower_components/font-awesome/webfonts/**",
+        "bower_components/linearicons/dist/web-font/fonts/**",
+        "src/fonts/**"
+    ],
+    "js": [
+        "bower_components/jquery/dist/jquery.min.js",
+        "bower_components/swiper/dist/js/swiper.min.js",
+        "src/_plugins/uikit/dist/js/uikit.js",
+        "src/_plugins/uikit/dist/js/uikit-icon.js",
+        "src/_plugins/mapping.js",
+        "src/_plugins/mapping-listener.js",
+        "src/_plugins/diamond.js/diamonds.js",
+        "bower_components/jssocials/dist/jssocials.min.js"
+    ],
+    "css": [
+        "src/_plugins/font.css",
+        "src/_plugins/grid.css",
+        "src/_plugins/diamond.js/diamonds.css",
+        "bower_components/swiper/dist/css/swiper.min.css",
+        "bower_components/jssocials/dist/jssocials-theme-flat.css"
+    ]
 }

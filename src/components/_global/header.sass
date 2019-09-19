@@ -4,8 +4,11 @@ header
 	width: 100%
 	top: 0
 	left: 0
+	transition: .4s cubic-bezier(0.22, 0.44, 0, 1) all
 	z-index: 1024
 	color: #fff
+	&.active
+		background: rgba(#000,.8)
 	.uk-navbar-nav
 		>li
 			>a

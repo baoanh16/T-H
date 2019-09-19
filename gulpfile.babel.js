@@ -8,14 +8,14 @@ import sassTask from "./_gulptasks/css";
 import jsCore from "./_gulptasks/core-js";
 import cssCore from "./_gulptasks/core-css";
 import { cleanDist } from "./_gulptasks/clean";
-import { copyFonts, copyImage, copyFavicon } from "./_gulptasks/copy";
+import { copyFonts, copyImage, copyFavicon, copyData } from "./_gulptasks/copy";
 
 exports.default = series(
-	cleanDist,
-	parallel(copyFavicon, copyImage, copyFonts),
-	parallel(jsCore, cssCore),
-	sassTask,
-	jsTask,
-	pugTask,
-	server
+    cleanDist,
+    parallel(copyFavicon, copyImage, copyFonts, copyData),
+    parallel(jsCore, cssCore),
+    sassTask,
+    jsTask,
+    pugTask,
+    server
 );

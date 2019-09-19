@@ -6,34 +6,38 @@ import jsTask from "./script";
 import pugTask from "./html";
 import cssCore from "./core-css";
 import sassTask from "./css";
-import { copyImage } from "./copy";
-import { cleanImage } from "./clean";
+import { copyImage, copyData } from "./copy";
+import { cleanImage, cleanData } from "./clean";
 
 export const server = () => {
-	bSync.init({
-		notify: true,
-		server: {
-			baseDir: "dist"
-		},
-		port: 8000
-	});
+    bSync.init({
+        notify: true,
+        server: {
+            baseDir: "dist"
+        },
+        port: 8000
+    });
 
-	watch(["src/js/*.js"], series(jsTask));
+    watch(["src/js/*.js"], series(jsTask));
 
-	watch(["src/**/**.pug"], series(pugTask));
-	watch(["src/components/**/**.sass", "src/_util/**.sass"], series(sassTask));
+    watch(["src/**/**.pug"], series(pugTask));
+    watch(["src/components/**/**.sass", "src/_util/**.sass"], series(sassTask));
 
-	watch(
-		["src/img/**/**.{svg,png,jpg,speg,gif}"],
-		series(cleanImage, copyImage)
-	);
+    watch(
+        ["src/img/**/**.{svg,png,jpg,speg,gif}"],
+        series(cleanImage, copyImage)
+    );
+    watch(
+        ["src/data/*.json"],
+        series(cleanData, copyData)
+    );
 
-	watch(
-		["src/_plugins/**/**.css", "src/_plugins/**/**.js", "config.json"],
-		parallel(jsCore, cssCore)
-	);
+    watch(
+        ["src/_plugins/**/**.css", "src/_plugins/**/**.js", "config.json"],
+        parallel(jsCore, cssCore)
+    );
 
-	watch(["dist"]).on("change", bSync.reload);
+    watch(["dist"]).on("change", bSync.reload);
 };
 
 module.exports = server;
